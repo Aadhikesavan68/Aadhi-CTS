@@ -1,11 +1,9 @@
-/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
     font-family: Arial, sans-serif;
     background: url('https://picsum.photos/1200/800') no-repeat center center fixed;
@@ -14,7 +12,6 @@ body {
     padding: 20px;
 }
 
-/* Header Styles */
 #mainHeader {
     background: linear-gradient(to right, #007BFF, #00C6FF);
     padding: 20px;
@@ -22,7 +19,6 @@ body {
     text-align: center;
 }
 
-/* Navigation Menu */
 .navMenu {
     list-style-type: none;
     display: flex;
@@ -35,7 +31,6 @@ body {
     padding: 10px;
 }
 
-/* Link Styling */
 a:link {
     color: white;
     text-decoration: none;
@@ -53,7 +48,6 @@ a:visited {
     color: lightgray;
 }
 
-/* Section Headings */
 h2 {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -62,12 +56,10 @@ h2 {
     color: white;
 }
 
-/* Group Selector */
 h3, p {
     line-height: 1.6;
 }
 
-/* Event Cards */
 .eventCard {
     background-color: rgba(255,255,255,0.9);
     border: 2px solid #007BFF;
@@ -76,19 +68,16 @@ h3, p {
     outline: 2px dashed gray;
 }
 
-/* Highlight Class */
 .highlight {
     font-weight: bold;
 }
 
-/* Gallery Images */
 .galleryImage {
     border: 3px solid black;
     width: 180px;
     height: 180px;
 }
 
-/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -105,7 +94,6 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Form Styling */
 form {
     background-color: rgba(255,255,255,0.9);
     padding: 20px;
@@ -122,7 +110,6 @@ input:focus, textarea:focus {
     outline: 3px solid #007BFF;
 }
 
-/* Multi Column Layout */
 .newsColumns {
     column-count: 2;
     column-gap: 30px;
@@ -131,7 +118,6 @@ input:focus, textarea:focus {
     padding: 15px;
 }
 
-/* Hidden vs None Example */
 .hiddenBox {
     visibility: hidden;
 }
@@ -140,7 +126,6 @@ input:focus, textarea:focus {
     display: none;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
 
     .navMenu {
