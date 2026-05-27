@@ -1,13 +1,10 @@
-// Phone Validation
 function validatePhone() {
     let phone = document.getElementById("phone").value;
-
     if(phone.length < 10) {
         alert("Phone number should contain 10 digits");
     }
 }
 
-// Event Fee Display
 function showFee() {
     let eventType = document.getElementById("eventType").value;
     let fee = "";
@@ -25,37 +22,31 @@ function showFee() {
     document.getElementById("feeDisplay").innerHTML = fee;
 }
 
-// Confirmation
 function showConfirmation() {
     document.getElementById("outputMessage").value =
         "Registration Submitted Successfully!";
 }
 
-// Enlarge Image
 function enlargeImage(img) {
     img.style.width = "300px";
     img.style.height = "300px";
 }
 
-// Character Counter
 function countCharacters() {
     let feedback = document.getElementById("feedback").value;
     document.getElementById("charCount").innerHTML = feedback.length;
 }
 
-// Video Ready
 function videoReady() {
     document.getElementById("videoMessage").innerHTML =
         "Video ready to play";
 }
 
-// Save Preference
 function savePreference() {
     let eventType = document.getElementById("eventType").value;
     localStorage.setItem("preferredEvent", eventType);
 }
 
-// Load Preference
 window.onload = function() {
     let savedEvent = localStorage.getItem("preferredEvent");
 
@@ -65,7 +56,6 @@ window.onload = function() {
     }
 }
 
-// Clear Storage
 function clearPreferences() {
     localStorage.clear();
     sessionStorage.clear();
@@ -73,7 +63,6 @@ function clearPreferences() {
     alert("Preferences Cleared");
 }
 
-// Geolocation
 function findLocation() {
 
     if(navigator.geolocation) {
@@ -105,7 +94,6 @@ function findLocation() {
     }
 }
 
-// Before Unload
 function confirmLeave() {
     return "Your form may not be saved.";
 }
