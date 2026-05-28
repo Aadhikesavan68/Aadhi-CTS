@@ -1,17 +1,45 @@
+<<<<<<< HEAD
+=======
+:root {
+    color-scheme: light;
+    --bg: #eef3ef;
+    --bg-strong: #d9e9df;
+    --surface: rgba(255, 255, 255, 0.88);
+    --surface-strong: #ffffff;
+    --text: #143024;
+    --muted: #4f695d;
+    --accent: #2f7a57;
+    --accent-2: #d97a3a;
+    --border: rgba(20, 48, 36, 0.14);
+    --shadow: 0 24px 60px rgba(20, 48, 36, 0.14);
+}
+
+>>>>>>> 271b8b0 (Build community event portal)
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: url('https://picsum.photos/1200/800') no-repeat center center fixed;
-    background-size: cover;
-    color: #222;
-    padding: 20px;
+<<<<<<< HEAD
+=======
+html {
+    scroll-behavior: smooth;
 }
 
+>>>>>>> 271b8b0 (Build community event portal)
+body {
+    font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(47, 122, 87, 0.16), transparent 30%),
+        radial-gradient(circle at right 20%, rgba(217, 122, 58, 0.14), transparent 24%),
+        linear-gradient(180deg, #f8fbf8 0%, var(--bg) 100%);
+    min-height: 100vh;
+    padding: 24px;
+}
+
+<<<<<<< HEAD
 #mainHeader {
     background: linear-gradient(to right, #007BFF, #00C6FF);
     padding: 20px;
@@ -33,21 +61,37 @@ body {
 
 a:link {
     color: white;
+=======
+a {
+    color: inherit;
+>>>>>>> 271b8b0 (Build community event portal)
     text-decoration: none;
 }
 
-a:hover {
-    color: yellow;
+button,
+input,
+select {
+    font: inherit;
 }
 
-a:active {
-    color: red;
+#mainHeader,
+.pageShell,
+.footerShell {
+    width: min(1180px, 100%);
+    margin: 0 auto;
 }
 
-a:visited {
-    color: lightgray;
+.heroShell {
+    display: grid;
+    gap: 24px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(217,233,223,0.88));
+    box-shadow: var(--shadow);
 }
 
+<<<<<<< HEAD
 h2 {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -58,16 +102,177 @@ h2 {
 
 h3, p {
     line-height: 1.6;
+=======
+.heroShell h1,
+.contentSection h2,
+.toolCard h2,
+.heroCard h2 {
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.eyebrow {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.heroCopy,
+.subtleNote,
+.calloutPanel p,
+.toolCard p,
+.footerShell p {
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.navMenu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.navMenu a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(47, 122, 87, 0.12);
+}
+
+.navMenu a:hover {
+    background: var(--surface-strong);
+    transform: translateY(-1px);
+}
+
+.pageShell {
+    display: grid;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.heroCard,
+.contentSection,
+.toolCard,
+.portalForm,
+.calloutPanel {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+.heroCard {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 18px;
+    padding: 24px;
+}
+
+.highlightText {
+    margin-top: 14px;
+    font-size: 1.05rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.calloutPanel {
+    padding: 20px;
+    align-self: stretch;
+    display: grid;
+    gap: 12px;
+    background: linear-gradient(180deg, rgba(47,122,87,0.08), rgba(255,255,255,0.72));
+}
+
+.contentSection {
+    padding: 24px;
+}
+
+.sectionHeader {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.controlRow {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.3fr) repeat(2, minmax(140px, 0.8fr)) auto;
+    gap: 12px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(20, 48, 36, 0.15);
+    background: rgba(255,255,255,0.96);
+    color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(47,122,87,0.18);
+    border-color: rgba(47,122,87,0.4);
+}
+
+button {
+    border: 0;
+    border-radius: 14px;
+    padding: 13px 18px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), #246244);
+    box-shadow: 0 12px 24px rgba(47, 122, 87, 0.2);
+    transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 28px rgba(47, 122, 87, 0.24);
+}
+
+button[type="button"] {
+    background: linear-gradient(135deg, var(--accent-2), #b95a1e);
+}
+
+.buttonCluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.eventGrid,
+.toolGrid {
+    display: grid;
+    gap: 18px;
+}
+
+.eventGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 8px;
+>>>>>>> 271b8b0 (Build community event portal)
 }
 
 .eventCard {
-    background-color: rgba(255,255,255,0.9);
-    border: 2px solid #007BFF;
-    padding: 20px;
-    margin: 20px 0;
-    outline: 2px dashed gray;
+    display: grid;
+    gap: 12px;
+    padding: 18px;
+    border-radius: 22px;
+    border: 1px solid rgba(20, 48, 36, 0.12);
+    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(240,245,241,0.92));
 }
 
+<<<<<<< HEAD
 .highlight {
     font-weight: bold;
 }
@@ -81,31 +286,157 @@ h3, p {
 table {
     width: 100%;
     border-collapse: collapse;
+=======
+.eventCard h3 {
+    font-size: 1.15rem;
+}
+
+.eventTag {
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(47, 122, 87, 0.1);
+}
+
+.eventCard dl {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.eventCard dt {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.eventCard dd {
+    margin: 0;
+    color: var(--muted);
+}
+
+.eventActions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.eventActions button {
+    flex: 1 1 120px;
+}
+
+.toolGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.toolCard {
+    padding: 22px;
+    display: grid;
+    gap: 12px;
+}
+
+.formGrid {
+    display: grid;
+    gap: 18px;
+}
+
+.portalForm {
+    display: grid;
+    gap: 16px;
+    padding: 22px;
+}
+
+.portalForm label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.errorText {
+    display: block;
+    min-height: 1rem;
+    margin-top: 6px;
+    color: #a3382d;
+    font-size: 0.9rem;
+}
+
+.loadingSpinner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(47, 122, 87, 0.1);
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.loadingSpinner::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(47, 122, 87, 0.25);
+    border-top-color: var(--accent);
+    animation: spin 900ms linear infinite;
+}
+
+.footerShell {
+    margin-top: 28px;
+    padding: 18px 24px;
+>>>>>>> 271b8b0 (Build community event portal)
     text-align: center;
-    background-color: rgba(255,255,255,0.9);
 }
 
-th, td {
-    border: 1px solid gray;
-    padding: 15px;
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
+<<<<<<< HEAD
 form {
     background-color: rgba(255,255,255,0.9);
     padding: 20px;
     border-radius: 10px;
+=======
+@media screen and (max-width: 860px) {
+    .heroCard {
+        grid-template-columns: 1fr;
+    }
+
+    .controlRow {
+        grid-template-columns: 1fr;
+    }
+>>>>>>> 271b8b0 (Build community event portal)
 }
 
-input, textarea, select {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-}
+@media screen and (max-width: 620px) {
+    body {
+        padding: 14px;
+    }
 
+<<<<<<< HEAD
 input:focus, textarea:focus {
     outline: 3px solid #007BFF;
 }
@@ -127,18 +458,23 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
+=======
+    .heroShell,
+    .contentSection,
+    .toolCard,
+    .portalForm,
+    .heroCard {
+        border-radius: 20px;
+        padding: 18px;
+    }
+>>>>>>> 271b8b0 (Build community event portal)
 
     .navMenu {
         flex-direction: column;
-        align-items: center;
     }
 
-    .galleryImage {
-        width: 100px;
-        height: 100px;
-    }
-
-    body {
-        font-size: 14px;
+    .buttonCluster,
+    .eventActions {
+        flex-direction: column;
     }
 }

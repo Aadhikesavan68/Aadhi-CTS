@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Community Event Portal</title>
     <link rel="stylesheet" href="styles.css">
+<<<<<<< HEAD
     <style>
         body {
             background-color: #f4f4f4;
@@ -22,16 +23,32 @@
 <body onbeforeunload="return confirmLeave()">
     <header id="mainHeader">
         <h1 style="color:red;">Community Event Portal</h1>
+=======
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header id="mainHeader" class="heroShell">
+        <div>
+            <p class="eyebrow">Local Community Event Portal</p>
+            <h1>Find, register, and manage nearby events in one place.</h1>
+            <p class="heroCopy">
+                Explore upcoming workshops, celebrations, and meetups. Filter by category or location,
+                register instantly, and keep track of available seats in real time.
+            </p>
+        </div>
+>>>>>>> 271b8b0 (Build community event portal)
 
         <nav>
             <ul class="navMenu">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
                 <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="help.html" target="_blank">Help</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="help.html" target="_blank" rel="noreferrer">Help</a></li>
             </ul>
         </nav>
     </header>
+<<<<<<< HEAD
     <main>
         <div id="welcomeBanner">
             <h2>Welcome Resident!</h2>
@@ -54,7 +71,7 @@
         <section id="events">
             <h2>Past Community Events</h2>
             <table>
-                <caption>Community Event Gallery</caption>
+            <meta charset="UTF-8">
                 <tr>
                     <td>
                         <img src="https://picsum.photos/200?1"
@@ -116,68 +133,112 @@
         </section>
         <section>
             <h2>Event Registration Form</h2>
+=======
 
-            <form id="eventForm">
-
-                <label>Name:</label>
-                <input type="text"
-                       placeholder="Enter your name"
-                       required
-                       autofocus>
-
-                <label>Email:</label>
-                <input type="email"
-                       placeholder="Enter your email"
-                       required>
-
-                <label>Phone:</label>
-                <input type="text"
-                       id="phone"
-                       placeholder="Enter phone number"
-                       onblur="validatePhone()">
-
-                <label>Date:</label>
-                <input type="date" required>
-
-                <label>Event Type:</label>
-                <select id="eventType" onchange="showFee(); savePreference()">
-                    <option value="">Select Event</option>
-                    <option value="Music">Music</option>
-                    <option value="Sports">Sports</option>
-                    <option value="Technology">Technology</option>
-                </select>
-
-                <p id="feeDisplay"></p>
-
-                <label>Feedback:</label>
-                <textarea id="feedback"
-                          placeholder="Write feedback"
-                          onkeyup="countCharacters()"></textarea>
-
-                <p>Character Count: <span id="charCount">0</span></p>
-
-                <button type="submit" onclick="showConfirmation()">
-                    Submit
-                </button>
-
-                <button type="button" onclick="clearPreferences()">
-                    Clear Preferences
-                </button>
-
-                <output id="outputMessage"></output>
-            </form>
-        </section>
-        <section>
-            <h2>Community News</h2>
-
-            <div class="newsColumns">
-                The city council is organizing multiple community programs,
-                awareness campaigns, health camps, educational workshops,
-                and cultural celebrations for residents. Citizens are encouraged
-                to participate actively and support local initiatives for a
-                stronger and more connected society.
+    <main class="pageShell">
+        <section id="featured" class="heroCard">
+            <div>
+                <p class="eyebrow">Welcome Resident</p>
+                <h2>Featured community spotlight</h2>
+                <p id="featuredEvent" class="highlightText"></p>
+            </div>
+            <div class="calloutPanel">
+                <p>Upcoming events only appear here when they still have seats available.</p>
+                <p id="statusMessage" aria-live="polite"></p>
             </div>
         </section>
+
+        <section id="events" class="contentSection">
+            <div class="sectionHeader">
+                <div>
+                    <p class="eyebrow">Browse Events</p>
+                    <h2>Upcoming community events</h2>
+                </div>
+                <div class="controlRow">
+                    <label class="visuallyHidden" for="searchInput">Search events</label>
+                    <input id="searchInput" type="search" placeholder="Quick search by name" autocomplete="off">
+                    <label class="visuallyHidden" for="categoryFilter">Category filter</label>
+                    <select id="categoryFilter" onchange="void 0">
+                        <option value="all">All categories</option>
+                    </select>
+                    <label class="visuallyHidden" for="locationFilter">Location filter</label>
+                    <select id="locationFilter" onchange="void 0">
+                        <option value="all">All locations</option>
+                    </select>
+                    <button type="button" id="clearFiltersBtn">Reset</button>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loadingSpinner" hidden>Loading events...</div>
+            <div id="remoteStatus" class="subtleNote"></div>
+            <div id="eventList" class="eventGrid" aria-live="polite"></div>
+        </section>
+
+        <section id="register" class="contentSection formGrid">
+            <div>
+                <p class="eyebrow">Registration Form</p>
+                <h2>Register for an event</h2>
+                <p class="subtleNote">The form reads values through <strong>form.elements</strong>, validates inline, and posts the payload to a mock API.</p>
+            </div>
+>>>>>>> 271b8b0 (Build community event portal)
+
+            <form id="registrationForm" class="portalForm" novalidate>
+                <div>
+                    <label for="fullName">Name</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Enter your name" required>
+                    <span class="errorText" id="fullNameError"></span>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email" required>
+                    <span class="errorText" id="emailError"></span>
+                </div>
+
+                <div>
+                    <label for="eventSelect">Selected event</label>
+                    <select id="eventSelect" name="eventSelect" required></select>
+                    <span class="errorText" id="eventSelectError"></span>
+                </div>
+
+                <div class="buttonCluster">
+                    <button type="submit" id="registerBtn">Register</button>
+                    <button type="button" id="simulateCancelBtn">Cancel registration</button>
+                </div>
+
+                <p id="formMessage" class="subtleNote" aria-live="polite"></p>
+            </form>
+        </section>
+<<<<<<< HEAD
+        <section>
+            <h2>Community News</h2>
+=======
+
+        <section id="tools" class="contentSection toolGrid">
+            <div class="toolCard">
+                <p class="eyebrow">Async JS</p>
+                <h2>Fetch mock event data</h2>
+                <p>One button uses <strong>.then()</strong> and <strong>.catch()</strong>; the other repeats the same flow with <strong>async/await</strong>.</p>
+                <div class="buttonCluster">
+                    <button type="button" id="loadMockBtn">Load mock events</button>
+                    <button type="button" id="loadAsyncBtn">Load with async/await</button>
+                </div>
+            </div>
+>>>>>>> 271b8b0 (Build community event portal)
+
+            <div class="toolCard">
+                <p class="eyebrow">jQuery</p>
+                <h2>Legacy DOM helper demo</h2>
+                <p id="jqueryNote">When jQuery is available, the register button click also fades event cards in and out. Moving this portal to React or Vue would make state updates and reusable UI sections easier to manage as the app grows.</p>
+            </div>
+
+            <div class="toolCard">
+                <p class="eyebrow">Portal Status</p>
+                <h2>Debugging signals</h2>
+                <p>Open DevTools to inspect console logs, network calls, and registration payloads when testing the portal.</p>
+            </div>
+        </section>
+<<<<<<< HEAD
         <section>
             <h2>Event Promo Video</h2>
 
@@ -206,5 +267,15 @@
         <p>Email: community@portal.com</p>
     </footer>
     <script src="script.js"></script>
+=======
+    </main>
+
+    <footer id="contact" class="footerShell">
+        <h3>Contact Us</h3>
+        <p>Email: community@portal.com</p>
+    </footer>
+
+    <script src="main.js"></script>
+>>>>>>> 271b8b0 (Build community event portal)
 </body>
 </html>
