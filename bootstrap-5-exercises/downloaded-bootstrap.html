@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Downloaded Files Demo</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container py-1">
+            <a class="navbar-brand fw-semibold" href="index.html">Bootstrap 5 Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#downloadNav" aria-controls="downloadNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="downloadNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html">Back to CDN demos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <section class="hero">
+            <div class="hero-inner">
+                <span class="hero-badge">Local bootstrap assets</span>
+                <h1>Downloaded Bootstrap files in a standalone page.</h1>
+                <p class="hero-copy">
+                    This page uses the files inside <strong>assets/bootstrap</strong> instead of a CDN, so the local CSS and JS paths are easy to verify.
+                </p>
+                <div class="hero-grid">
+                    <div class="hero-chip"><span>CSS</span><strong>assets/bootstrap/css/bootstrap.min.css</strong></div>
+                    <div class="hero-chip"><span>JS</span><strong>assets/bootstrap/js/bootstrap.bundle.min.js</strong></div>
+                    <div class="hero-chip"><span>Icons</span><strong>assets/bootstrap/icons/</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card mt-4">
+            <div class="section-kicker">Exercise 1.2</div>
+            <h2 class="section-title">Project set up with downloaded Bootstrap files</h2>
+            <p class="section-copy">The page below proves the downloaded files are working by using a local navbar collapse and a Bootstrap modal trigger.</p>
+            <div class="demo-surface mt-3">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-4 border mb-3">
+                    <div class="container-fluid px-0">
+                        <a class="navbar-brand fw-bold" href="#">Local Pack</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#localNav" aria-controls="localNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="localNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link active" href="#localSetup">Setup</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#localStructure">Structure</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#localDemo">Demo</a></li>
+                            </ul>
+                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#assetModal">Open asset note</button>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="row g-3" id="localDemo">
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body" id="localSetup">
+                                <h3 class="h5">What is local here?</h3>
+                                <p class="mb-0">The Bootstrap stylesheet and JS bundle are loaded from the <strong>assets/bootstrap</strong> folder, so this page works without external CDN links.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" id="localStructure">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h3 class="h5">Folder purpose</h3>
+                                <p class="mb-0">The <strong>css</strong> folder holds compiled styles, the <strong>js</strong> folder holds the bundle, and the <strong>icons</strong> folder is reserved for icon assets if you add them later.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 p-3 border rounded-4 bg-white">
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                        <span class="badge text-bg-success">Local CSS loaded</span>
+                        <span class="badge text-bg-secondary">Local JS loaded</span>
+                        <button class="btn btn-sm btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#localCode" aria-expanded="false" aria-controls="localCode">Show paths</button>
+                    </div>
+                    <div class="collapse mt-3" id="localCode">
+                        <pre class="code-block mb-0"><code>&lt;link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"&gt;
+&lt;script src="assets/bootstrap/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="assetModal" tabindex="-1" aria-labelledby="assetModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="assetModalLabel">Asset folder note</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    The icons folder is included in the folder structure so this exercise mirrors a real downloaded Bootstrap setup. Add Bootstrap Icons or other SVG assets there if needed.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

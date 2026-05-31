@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Exercises Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container py-1">
+            <a class="navbar-brand fw-semibold" href="#top">Bootstrap 5 Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#solutionNav" aria-controls="solutionNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="solutionNav">
+                <div class="navbar-nav ms-auto gap-lg-2">
+                    <a class="nav-link" href="#setup">Setup</a>
+                    <a class="nav-link" href="#grid">Grid</a>
+                    <a class="nav-link" href="#flex">Flex</a>
+                    <a class="nav-link" href="#forms">Forms</a>
+                    <a class="nav-link" href="#components">Components</a>
+                    <a class="nav-link" href="downloaded-bootstrap.html">Downloaded files</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-shell" id="top">
+        <section class="hero">
+            <div class="hero-inner">
+                <span class="hero-badge">Bootstrap 5 exercise pack</span>
+                <h1>Worked solutions for grid, forms, buttons, navs, typography, and cards.</h1>
+                <p class="hero-copy">
+                    This folder keeps the Bootstrap practice work isolated from the rest of the repo.
+                    The main page uses Bootstrap from a CDN, while the downloaded-files page shows the local asset setup.
+                </p>
+                <div class="hero-grid">
+                    <div class="hero-chip"><span>Exercise 1.1</span><strong>CDN setup</strong></div>
+                    <div class="hero-chip"><span>Exercise 1.2</span><strong>Local asset setup</strong></div>
+                    <div class="hero-chip"><span>Exercise 3 to 5</span><strong>Responsive grid patterns</strong></div>
+                    <div class="hero-chip"><span>Exercise 7 to 11</span><strong>Utilities and components</strong></div>
+                </div>
+                <div class="solution-nav nav nav-pills flex-wrap gap-2 mt-4">
+                    <a class="nav-link active" href="#setup">Setup</a>
+                    <a class="nav-link" href="#structure">Structure</a>
+                    <a class="nav-link" href="#grid">Grid</a>
+                    <a class="nav-link" href="#columns">Columns</a>
+                    <a class="nav-link" href="#alignment">Alignment</a>
+                    <a class="nav-link" href="#flex">Flex</a>
+                    <a class="nav-link" href="#typography">Typography</a>
+                    <a class="nav-link" href="#forms">Forms</a>
+                    <a class="nav-link" href="#buttons">Buttons</a>
+                    <a class="nav-link" href="#navigation">Navigation</a>
+                    <a class="nav-link" href="#components">Cards</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="setup">
+            <div class="section-kicker">Exercise 1.1 and 2.2</div>
+            <h2 class="section-title">Bootstrap 5 CDN setup and bundle JS</h2>
+            <p class="section-copy">This page links Bootstrap from the CDN and includes <strong>bootstrap.bundle.min.js</strong> so collapse, tabs, and toggles work without extra scripts.</p>
+            <div class="demo-surface mt-3">
+                <div class="row g-3 align-items-stretch">
+                    <div class="col-lg-6">
+                        <div class="alert alert-primary h-100 mb-0" role="alert">
+                            <h3 class="h5">Why the bundle matters</h3>
+                            <p class="mb-0">The bundle includes Popper and Bootstrap's plugins, so the navbar collapse, tabs, and button toggles in this solution work immediately.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <pre class="code-block mb-0"><code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="structure">
+            <div class="section-kicker">Exercise 2.1</div>
+            <h2 class="section-title">Downloaded Bootstrap directory structure</h2>
+            <p class="section-copy">The local asset page uses the downloaded Bootstrap files from <strong>assets/bootstrap</strong>. The CSS folder stores the compiled stylesheet, the JS folder stores the bundle, and the icons folder is where icon assets would live if you add Bootstrap Icons or another icon set.</p>
+            <div class="row g-3 mt-1">
+                <div class="col-lg-7">
+                    <div class="directory-tree h-100">
+                        bootstrap-5-exercises/<br>
+                        ├── <span class="accent">assets/</span><br>
+                        │   └── <span class="accent">bootstrap/</span><br>
+                        │       ├── <span class="accent">css/</span>  &nbsp;compiled Bootstrap styles<br>
+                        │       ├── <span class="accent">js/</span>   &nbsp;Bootstrap bundle and plugins<br>
+                        │       └── <span class="accent">icons/</span> &nbsp;optional icon assets folder<br>
+                        ├── index.html<br>
+                        ├── downloaded-bootstrap.html<br>
+                        └── styles.css
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="demo-surface h-100">
+                        <span class="pill-note mb-3"><span class="icon-dot"></span> Local assets</span>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item px-0">CSS: presentation layer and utility classes</li>
+                            <li class="list-group-item px-0">JS: collapse, tabs, modals, dropdowns, tooltips</li>
+                            <li class="list-group-item px-0">Icons: optional SVG, font, or icon-package files</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="grid">
+            <div class="section-kicker">Exercise 3</div>
+            <h2 class="section-title">Responsive grid layout</h2>
+            <p class="section-copy">Three cards stack on mobile, become two per row on tablets, and three per row on desktop using <strong>col-12 col-md-6 col-lg-4</strong>.</p>
+            <div class="demo-surface mt-3">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><h3 class="h5">Card One</h3><p class="mb-0">Stacks full width on small screens.</p></div></div></div>
+                    <div class="col-12 col-md-6 col-lg-4"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><h3 class="h5">Card Two</h3><p class="mb-0">Splits into two columns at md.</p></div></div></div>
+                    <div class="col-12 col-md-6 col-lg-4"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><h3 class="h5">Card Three</h3><p class="mb-0">Returns to three columns on lg.</p></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="columns">
+            <div class="section-kicker">Exercise 4</div>
+            <h2 class="section-title">Column layouts</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Two-column layout with a sidebar and content area.</p>
+                    <div class="demo-surface">
+                        <div class="row g-3">
+                            <aside class="col-md-3">
+                                <div class="card border-0 bg-warning-subtle h-100"><div class="card-body"><strong>Sidebar</strong><p class="mb-0">col-md-3</p></div></div>
+                            </aside>
+                            <section class="col-md-9">
+                                <div class="card border-0 bg-body h-100"><div class="card-body"><strong>Content</strong><p class="mb-0">col-md-9 for the main content area.</p></div></div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Four equal columns at sm and above.</p>
+                    <div class="demo-surface">
+                        <div class="row g-2 text-center">
+                            <div class="col-sm-3"><div class="p-3 bg-success-subtle rounded-3">1</div></div>
+                            <div class="col-sm-3"><div class="p-3 bg-success-subtle rounded-3">2</div></div>
+                            <div class="col-sm-3"><div class="p-3 bg-success-subtle rounded-3">3</div></div>
+                            <div class="col-sm-3"><div class="p-3 bg-success-subtle rounded-3">4</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="alignment">
+            <div class="section-kicker">Exercise 5</div>
+            <h2 class="section-title">Alignment and reordering</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Centered content using <strong>justify-content-center</strong> and <strong>align-items-center</strong>.</p>
+                    <div class="demo-surface">
+                        <div class="row justify-content-center align-items-center" style="min-height: 180px;">
+                            <div class="col-10 col-md-8">
+                                <div class="p-4 rounded-4 text-center bg-dark text-white">Centered row content</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Columns reordered on medium screens with <strong>order-md-2</strong> and <strong>order-md-1</strong>.</p>
+                    <div class="demo-surface">
+                        <div class="row g-3">
+                            <div class="col-md-4 order-md-2"><div class="p-3 rounded-3 bg-info-subtle h-100">Second on md+</div></div>
+                            <div class="col-md-8 order-md-1"><div class="p-3 rounded-3 bg-light h-100 border">First on md+</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="flex">
+            <div class="section-kicker">Exercise 7.1 and 7.2</div>
+            <h2 class="section-title">Responsive flexbox utilities</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">A navbar-like layout using <strong>d-flex</strong>, <strong>flex-column</strong>, and <strong>flex-md-row</strong>.</p>
+                    <div class="demo-surface">
+                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 p-3 rounded-4 bg-white border">
+                            <strong>Studio Menu</strong>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge text-bg-dark">Home</span>
+                                <span class="badge text-bg-secondary">Work</span>
+                                <span class="badge text-bg-success">About</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">A card header row using <strong>justify-content-between</strong> and <strong>align-items-center</strong>.</p>
+                    <div class="demo-surface">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h3 class="h5 mb-1">Release note</h3>
+                                    <p class="text-muted mb-0">Compact, balanced content row</p>
+                                </div>
+                                <button class="btn btn-outline-primary btn-sm" type="button">Review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="typography">
+            <div class="section-kicker">Typography</div>
+            <h2 class="section-title">Bootstrap typography utilities</h2>
+            <div class="demo-surface mt-3">
+                <div class="display-font display-1 mb-2">display-1</div>
+                <p class="lead mb-1">lead text used for an intro paragraph.</p>
+                <p class="text-muted mb-1">text-muted for supporting copy.</p>
+                <p class="fw-bold mb-1">fw-bold for emphasis.</p>
+                <p class="text-uppercase mb-1">text-uppercase</p>
+                <p class="text-lowercase mb-1">TEXT-LOWERCASE</p>
+                <p class="text-capitalize mb-0">text capitalize utility</p>
+            </div>
+        </section>
+
+        <section class="section-card" id="forms">
+            <div class="section-kicker">Exercise 8</div>
+            <h2 class="section-title">Forms</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Registration form with <strong>form-control</strong>, <strong>form-check</strong>, and <strong>input-group</strong>.</p>
+                    <form class="demo-surface p-3">
+                        <div class="mb-3">
+                            <label class="form-label" for="nameDemo">Full name</label>
+                            <input id="nameDemo" class="form-control" type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="emailDemo">Email address</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input id="emailDemo" class="form-control" type="email" placeholder="name@example.com">
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input class="form-check-input" type="checkbox" id="updatesDemo">
+                            <label class="form-check-label" for="updatesDemo">Send me event updates</label>
+                        </div>
+                        <button class="btn btn-primary" type="button">Register</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Login form using <strong>form-floating</strong>.</p>
+                    <form class="demo-surface p-3">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                            <label for="floatingEmail">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="btn btn-dark" type="button">Sign in</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="buttons">
+            <div class="section-kicker">Exercise 9</div>
+            <h2 class="section-title">Buttons and button groups</h2>
+            <div class="demo-surface mt-3">
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button class="btn btn-primary" type="button">Primary</button>
+                    <button class="btn btn-secondary" type="button">Secondary</button>
+                    <button class="btn btn-success" type="button">Success</button>
+                    <button class="btn btn-danger" type="button">Danger</button>
+                    <button class="btn btn-warning" type="button">Warning</button>
+                    <button class="btn btn-info" type="button">Info</button>
+                    <button class="btn btn-light" type="button">Light</button>
+                    <button class="btn btn-dark" type="button">Dark</button>
+                    <button class="btn btn-outline-primary" type="button">Outline primary</button>
+                    <button class="btn btn-outline-danger" type="button">Outline danger</button>
+                </div>
+                <div class="btn-group mb-3" role="group" aria-label="Button group example">
+                    <button class="btn btn-outline-secondary" type="button">Left</button>
+                    <button class="btn btn-outline-secondary" type="button">Middle</button>
+                    <button class="btn btn-outline-secondary" type="button">Right</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Toggle buttons">
+                    <input type="checkbox" class="btn-check" id="toggleA" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="toggleA">Checkbox A</label>
+                    <input type="checkbox" class="btn-check" id="toggleB" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="toggleB">Checkbox B</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="navigation">
+            <div class="section-kicker">Exercise 10</div>
+            <h2 class="section-title">Navbars and navigation</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Responsive navbar with logo, links, and search form.</p>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-4 border demo-surface">
+                        <div class="container-fluid px-0">
+                            <a class="navbar-brand fw-bold" href="#">Studio</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miniNav" aria-controls="miniNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="miniNav">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                                </ul>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Tabs and pills navigation.</p>
+                    <div class="demo-surface">
+                        <ul class="nav nav-tabs mb-3" id="tabDemo" role="tablist">
+                            <li class="nav-item" role="presentation"><button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-pane" type="button" role="tab">Home</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-pane" type="button" role="tab">Profile</button></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="home-pane" role="tabpanel">Tabs are great for grouped content.</div>
+                            <div class="tab-pane fade" id="profile-pane" role="tabpanel">Pills and tabs both use Bootstrap's JS bundle.</div>
+                        </div>
+                        <ul class="nav nav-pills mt-3">
+                            <li class="nav-item"><a class="nav-link active" href="#">Pill one</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Pill two</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" id="components">
+            <div class="section-kicker">Exercise 11</div>
+            <h2 class="section-title">Cards and media objects</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Profile card using the card system.</p>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">AC</div>
+                                <div>
+                                    <h3 class="h5 mb-1">Aadhi C T S</h3>
+                                    <p class="text-muted mb-0">Bootstrap learner and frontend builder</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="mb-0">This profile card combines <strong>card</strong>, <strong>card-body</strong>, utility spacing, and a media-like layout.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-copy mb-2">Media object style layout.</p>
+                    <div class="demo-surface">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-3 bg-warning-subtle d-flex align-items-center justify-content-center" style="width: 72px; height: 72px;">Img</div>
+                            <div>
+                                <h3 class="h5 mb-1">Event preview</h3>
+                                <p class="mb-0">A compact left-image, right-content layout works well for media style sections and list items.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p class="footer-note">Open the local asset demo in <a href="downloaded-bootstrap.html">downloaded-bootstrap.html</a> to see the downloaded Bootstrap files in use.</p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
