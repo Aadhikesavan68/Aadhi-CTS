@@ -1,480 +1,510 @@
-<<<<<<< HEAD
-=======
 :root {
-    color-scheme: light;
-    --bg: #eef3ef;
-    --bg-strong: #d9e9df;
-    --surface: rgba(255, 255, 255, 0.88);
-    --surface-strong: #ffffff;
-    --text: #143024;
-    --muted: #4f695d;
-    --accent: #2f7a57;
-    --accent-2: #d97a3a;
-    --border: rgba(20, 48, 36, 0.14);
-    --shadow: 0 24px 60px rgba(20, 48, 36, 0.14);
+  color-scheme: light;
+  --bg: #eef3ef;
+  --bg-strong: #d9e9df;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: #ffffff;
+  --text: #143024;
+  --muted: #4f695d;
+  --accent: #2f7a57;
+  --accent-2: #d97a3a;
+  --border: rgba(20, 48, 36, 0.14);
+  --shadow: 0 24px 60px rgba(20, 48, 36, 0.14);
 }
 
->>>>>>> 271b8b0 (Build community event portal)
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
->>>>>>> 271b8b0 (Build community event portal)
 body {
-    font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
-    color: var(--text);
-    background:
-        radial-gradient(circle at top left, rgba(47, 122, 87, 0.16), transparent 30%),
-        radial-gradient(circle at right 20%, rgba(217, 122, 58, 0.14), transparent 24%),
-        linear-gradient(180deg, #f8fbf8 0%, var(--bg) 100%);
-    min-height: 100vh;
-    padding: 24px;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(47, 122, 87, 0.16), transparent 30%),
+    radial-gradient(circle at right 20%, rgba(217, 122, 58, 0.14), transparent 24%),
+    linear-gradient(180deg, #f8fbf8 0%, var(--bg) 100%);
+  padding: 24px;
 }
 
-<<<<<<< HEAD
-#mainHeader {
-    background: linear-gradient(to right, #007BFF, #00C6FF);
-    padding: 20px;
-    color: white;
-    text-align: center;
-}
-
-.navMenu {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.navMenu li {
-    padding: 10px;
-}
-
-a:link {
-    color: white;
-=======
 a {
-    color: inherit;
->>>>>>> 271b8b0 (Build community event portal)
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
 }
 
 button,
 input,
-select {
-    font: inherit;
+select,
+textarea {
+  font: inherit;
 }
 
-#mainHeader,
+.pageBackdrop {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.42), transparent 18%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.26), transparent 20%);
+  z-index: -1;
+}
+
+.topNav,
 .pageShell,
-.footerShell {
-    width: min(1180px, 100%);
-    margin: 0 auto;
+.siteFooter {
+  width: min(1180px, 100%);
+  margin: 0 auto;
 }
 
-.heroShell {
-    display: grid;
-    gap: 24px;
-    padding: 28px;
-    border: 1px solid var(--border);
-    border-radius: 28px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(217,233,223,0.88));
-    box-shadow: var(--shadow);
+.topNav {
+  position: sticky;
+  top: 12px;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
 }
 
-<<<<<<< HEAD
-h2 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    background: linear-gradient(to right, rgba(0,123,255,0.8), rgba(0,198,255,0.8));
-    padding: 10px;
-    color: white;
+.brandLockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-h3, p {
-    line-height: 1.6;
-=======
-.heroShell h1,
-.contentSection h2,
-.toolCard h2,
-.heroCard h2 {
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+.brandMark {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, var(--accent), #245f43);
+  box-shadow: 0 16px 26px rgba(47, 122, 87, 0.22);
 }
 
-.eyebrow {
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--accent);
-    font-weight: 700;
-    margin-bottom: 10px;
+.brandLockup strong,
+.brandLockup p {
+  display: block;
 }
 
-.heroCopy,
-.subtleNote,
-.calloutPanel p,
-.toolCard p,
-.footerShell p {
-    color: var(--muted);
-    line-height: 1.65;
+.brandLockup strong {
+  font-size: 1rem;
 }
 
-.navMenu {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.brandLockup p {
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin-top: 2px;
 }
 
-.navMenu a {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 14px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.6);
-    border: 1px solid rgba(47, 122, 87, 0.12);
+.navLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.navMenu a:hover {
-    background: var(--surface-strong);
-    transform: translateY(-1px);
+.navLinks a,
+.primaryLink,
+.secondaryLink,
+.solidButton,
+.outlineButton,
+.ghostButton {
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease, background-color 160ms ease;
+}
+
+.navLinks a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.navLinks a:hover {
+  transform: translateY(-1px);
+  background: rgba(47, 122, 87, 0.08);
+  color: var(--text);
 }
 
 .pageShell {
-    display: grid;
-    gap: 24px;
-    margin-top: 24px;
+  display: grid;
+  gap: 24px;
+  padding: 24px 0 28px;
 }
 
-.heroCard,
-.contentSection,
-.toolCard,
-.portalForm,
-.calloutPanel {
-    border: 1px solid var(--border);
-    background: var(--surface);
-    backdrop-filter: blur(10px);
-    border-radius: 24px;
-    box-shadow: var(--shadow);
+.heroPanel,
+.sectionCard {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
 }
 
-.heroCard {
-    display: grid;
-    grid-template-columns: 1.35fr 1fr;
-    gap: 18px;
-    padding: 24px;
+.heroPanel {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 22px;
+  padding: 28px;
 }
 
-.highlightText {
-    margin-top: 14px;
-    font-size: 1.05rem;
-    color: var(--accent);
-    font-weight: 700;
+.heroCopyBlock {
+  display: grid;
+  gap: 18px;
+  align-content: start;
 }
 
-.calloutPanel {
-    padding: 20px;
-    align-self: stretch;
-    display: grid;
-    gap: 12px;
-    background: linear-gradient(180deg, rgba(47,122,87,0.08), rgba(255,255,255,0.72));
+.eyebrow {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  font-weight: 700;
 }
 
-.contentSection {
-    padding: 24px;
+.heroPanel h1,
+.sectionCard h2,
+.sectionCard h3 {
+  letter-spacing: -0.03em;
 }
 
-.sectionHeader {
-    display: grid;
-    gap: 18px;
-    margin-bottom: 18px;
+.heroPanel h1 {
+  font-size: clamp(2.2rem, 4vw, 4.3rem);
+  line-height: 0.98;
+  max-width: 13ch;
 }
 
-.controlRow {
-    display: grid;
-    grid-template-columns: minmax(220px, 1.3fr) repeat(2, minmax(140px, 0.8fr)) auto;
-    gap: 12px;
+.heroText,
+.sectionNote,
+.bannerOffer,
+.miniCard p,
+.fieldHint,
+.locationOutput,
+.contactGrid p,
+.siteFooter p,
+figcaption {
+  color: var(--muted);
+  line-height: 1.7;
 }
 
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 13px 14px;
-    border-radius: 14px;
-    border: 1px solid rgba(20, 48, 36, 0.15);
-    background: rgba(255,255,255,0.96);
-    color: var(--text);
+.heroActions,
+.actionsBar,
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 3px solid rgba(47,122,87,0.18);
-    border-color: rgba(47,122,87,0.4);
-}
-
+.primaryLink,
+.secondaryLink,
+.solidButton,
+.outlineButton,
+.ghostButton,
 button {
-    border: 0;
-    border-radius: 14px;
-    padding: 13px 18px;
-    cursor: pointer;
-    color: #fff;
-    background: linear-gradient(135deg, var(--accent), #246244);
-    box-shadow: 0 12px 24px rgba(47, 122, 87, 0.2);
-    transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  padding: 12px 18px;
+  cursor: pointer;
 }
 
-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 16px 28px rgba(47, 122, 87, 0.24);
+.primaryLink,
+.solidButton {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), #245f43);
+  box-shadow: 0 16px 26px rgba(47, 122, 87, 0.2);
 }
 
+.secondaryLink,
+.outlineButton,
+.ghostButton,
+.secondaryTint,
 button[type="button"] {
-    background: linear-gradient(135deg, var(--accent-2), #b95a1e);
+  color: var(--text);
+  background: linear-gradient(135deg, rgba(196, 107, 63, 0.15), rgba(196, 107, 63, 0.22));
 }
 
-.buttonCluster {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 8px;
+.primaryLink:hover,
+.secondaryLink:hover,
+.solidButton:hover,
+.outlineButton:hover,
+.ghostButton:hover,
+button:hover {
+  transform: translateY(-1px);
 }
 
-.eventGrid,
-.toolGrid {
-    display: grid;
-    gap: 18px;
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.eventGrid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    margin-top: 8px;
->>>>>>> 271b8b0 (Build community event portal)
+.heroStats article {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(47, 122, 87, 0.1);
 }
 
-.eventCard {
-    display: grid;
-    gap: 12px;
+.heroStats strong,
+.heroStats span {
+  display: block;
+}
+
+.heroStats strong {
+  font-size: 1.2rem;
+}
+
+.heroStats span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.heroAside {
+  display: grid;
+  gap: 14px;
+}
+
+.bannerCard,
+.miniCard {
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.72));
+}
+
+.bannerKicker {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.bannerKicker span {
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.bannerCard h2 {
+  font-size: 1.8rem;
+  margin: 10px 0 12px;
+}
+
+.bannerOffer {
+  color: var(--text);
+}
+
+.sectionCard {
+  padding: 24px;
+}
+
+.sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.sectionHeading h2 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  margin-top: 6px;
+}
+
+.compact {
+  margin-bottom: 14px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.galleryCard {
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  box-shadow: 0 18px 35px rgba(20, 48, 36, 0.09);
+}
+
+.gallery {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.gallery:hover {
+  transform: scale(1.03);
+  filter: saturate(1.06);
+}
+
+.gallery.enlarged {
+  transform: scale(1.5);
+  position: relative;
+  z-index: 4;
+}
+
+figcaption {
+  padding: 14px 16px 16px;
+  font-weight: 700;
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.formCard,
+.mediaCard,
+.locationCard,
+.contactCard {
+  display: grid;
+}
+
+.formCard form {
+  display: grid;
+  gap: 12px;
+}
+
+.formCard label {
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.formCard input,
+.formCard select,
+.formCard textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid rgba(20, 48, 36, 0.14);
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--text);
+}
+
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus {
+  outline: 3px solid rgba(47, 122, 87, 0.16);
+  border-color: rgba(47, 122, 87, 0.36);
+}
+
+.formCard textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+output,
+.fieldHint,
+.locationOutput {
+  min-height: 1.4em;
+}
+
+.successOutput,
+.successReply {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.promoVideo {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: #000;
+}
+
+.contactCard {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 18px;
+}
+
+.contactGrid {
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.65));
+}
+
+.siteFooter {
+  padding: 12px 6px 2px;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .heroPanel,
+  .sectionGrid,
+  .contactCard {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeading,
+  .topNav {
+    align-items: start;
+  }
+
+  .topNav {
+    border-radius: 28px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 14px;
+  }
+
+  .pageShell {
+    padding-top: 18px;
+  }
+
+  .heroPanel,
+  .sectionCard {
     padding: 18px;
     border-radius: 22px;
-    border: 1px solid rgba(20, 48, 36, 0.12);
-    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(240,245,241,0.92));
-}
+  }
 
-<<<<<<< HEAD
-.highlight {
-    font-weight: bold;
-}
+  .heroPanel h1 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
 
-.galleryImage {
-    border: 3px solid black;
-    width: 180px;
-    height: 180px;
-}
-
-table {
+  .heroActions,
+  .navLinks {
     width: 100%;
-    border-collapse: collapse;
-=======
-.eventCard h3 {
-    font-size: 1.15rem;
-}
+  }
 
-.eventTag {
-    width: fit-content;
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--accent);
-    background: rgba(47, 122, 87, 0.1);
-}
-
-.eventCard dl {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 6px 12px;
-    font-size: 0.9rem;
-}
-
-.eventCard dt {
-    font-weight: 700;
-    color: var(--accent);
-}
-
-.eventCard dd {
-    margin: 0;
-    color: var(--muted);
-}
-
-.eventActions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.eventActions button {
-    flex: 1 1 120px;
-}
-
-.toolGrid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.toolCard {
-    padding: 22px;
-    display: grid;
-    gap: 12px;
-}
-
-.formGrid {
-    display: grid;
-    gap: 18px;
-}
-
-.portalForm {
-    display: grid;
-    gap: 16px;
-    padding: 22px;
-}
-
-.portalForm label {
-    display: inline-block;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.errorText {
-    display: block;
-    min-height: 1rem;
-    margin-top: 6px;
-    color: #a3382d;
-    font-size: 0.9rem;
-}
-
-.loadingSpinner {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    width: fit-content;
-    padding: 10px 14px;
-    border-radius: 999px;
-    background: rgba(47, 122, 87, 0.1);
-    color: var(--accent);
-    font-weight: 700;
-}
-
-.loadingSpinner::before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid rgba(47, 122, 87, 0.25);
-    border-top-color: var(--accent);
-    animation: spin 900ms linear infinite;
-}
-
-.footerShell {
-    margin-top: 28px;
-    padding: 18px 24px;
->>>>>>> 271b8b0 (Build community event portal)
+  .navLinks a {
+    flex: 1 1 auto;
     text-align: center;
-}
+  }
 
-.visuallyHidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-<<<<<<< HEAD
-form {
-    background-color: rgba(255,255,255,0.9);
-    padding: 20px;
-    border-radius: 10px;
-=======
-@media screen and (max-width: 860px) {
-    .heroCard {
-        grid-template-columns: 1fr;
-    }
-
-    .controlRow {
-        grid-template-columns: 1fr;
-    }
->>>>>>> 271b8b0 (Build community event portal)
-}
-
-@media screen and (max-width: 620px) {
-    body {
-        padding: 14px;
-    }
-
-<<<<<<< HEAD
-input:focus, textarea:focus {
-    outline: 3px solid #007BFF;
-}
-
-.newsColumns {
-    column-count: 2;
-    column-gap: 30px;
-    column-rule: 1px solid gray;
-    background-color: rgba(255,255,255,0.9);
-    padding: 15px;
-}
-
-.hiddenBox {
-    visibility: hidden;
-}
-
-.noneBox {
-    display: none;
-}
-
-@media screen and (max-width: 768px) {
-=======
-    .heroShell,
-    .contentSection,
-    .toolCard,
-    .portalForm,
-    .heroCard {
-        border-radius: 20px;
-        padding: 18px;
-    }
->>>>>>> 271b8b0 (Build community event portal)
-
-    .navMenu {
-        flex-direction: column;
-    }
-
-    .buttonCluster,
-    .eventActions {
-        flex-direction: column;
-    }
+  .heroStats {
+    grid-template-columns: 1fr;
+  }
 }

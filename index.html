@@ -1,281 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>Local Community Event Portal</title>
-    <link rel="stylesheet" href="styles.css">
-<<<<<<< HEAD
-    <style>
-        body {
-            background-color: #f4f4f4;
-        }
-
-        #welcomeBanner {
-            background-color: blue;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-    </style>
-</head>
-
-<body onbeforeunload="return confirmLeave()">
-    <header id="mainHeader">
-        <h1 style="color:red;">Community Event Portal</h1>
-=======
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A vibrant community portal for event discovery, registration, feedback, and local updates."
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</head>
-<body>
-    <header id="mainHeader" class="heroShell">
+  </head>
+  <body onbeforeunload="return confirmLeave()">
+    <div class="pageBackdrop"></div>
+
+    <nav class="topNav">
+      <div class="brandLockup">
+        <span class="brandMark">CE</span>
         <div>
-            <p class="eyebrow">Local Community Event Portal</p>
-            <h1>Find, register, and manage nearby events in one place.</h1>
-            <p class="heroCopy">
-                Explore upcoming workshops, celebrations, and meetups. Filter by category or location,
-                register instantly, and keep track of available seats in real time.
-            </p>
+          <strong>Community Event Portal</strong>
+          <p>Discover, register, and share local events</p>
         </div>
->>>>>>> 271b8b0 (Build community event portal)
-
-        <nav>
-            <ul class="navMenu">
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#register">Register</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <li><a href="help.html" target="_blank" rel="noreferrer">Help</a></li>
-            </ul>
-        </nav>
-    </header>
-<<<<<<< HEAD
-    <main>
-        <div id="welcomeBanner">
-            <h2>Welcome Resident!</h2>
-            <p class="highlight">
-                Register today and get
-                <span style="color:red; font-weight:bold;">20% OFF</span>
-                on premium events.
-            </p>
-        </div>
-        <section id="home">
-            <h2>About Our Portal</h2>
-
-            <div class="eventCard">
-                <p>
-                    This portal helps local residents register for events,
-                    view locations, and participate in community activities.
-                </p>
-            </div>
-        </section>
-        <section id="events">
-            <h2>Past Community Events</h2>
-            <table>
-            <meta charset="UTF-8">
-                <tr>
-                    <td>
-                        <img src="https://picsum.photos/200?1"
-                             alt="Music Event"
-                             title="Music Event"
-                             class="galleryImage"
-                             ondblclick="enlargeImage(this)">
-                        <p>Music Festival</p>
-                    </td>
-
-                    <td>
-                        <img src="https://picsum.photos/200?2"
-                             alt="Sports Event"
-                             title="Sports Event"
-                             class="galleryImage"
-                             ondblclick="enlargeImage(this)">
-                        <p>Sports Day</p>
-                    </td>
-
-                    <td>
-                        <img src="https://picsum.photos/200?3"
-                             alt="Art Event"
-                             title="Art Event"
-                             class="galleryImage"
-                             ondblclick="enlargeImage(this)">
-                        <p>Art Exhibition</p>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <img src="https://picsum.photos/200?4"
-                             alt="Food Event"
-                             title="Food Event"
-                             class="galleryImage"
-                             ondblclick="enlargeImage(this)">
-                        <p>Food Carnival</p>
-                    </td>
-
-                    <td>
-                        <img src="https://picsum.photos/200?5"
-                             alt="Tech Event"
-                             title="Tech Event"
-                             class="galleryImage"
-                             ondblclick="enlargeImage(this)">
-                        <p>Tech Meetup</p>
-                    </td>
-
-                    <td>
-                        <img src="https://picsum.photos/200?6"
-                             alt="Dance Event"
-                             title="Dance Event"
-                             class="galleryImage"
-                             ondblclick="enlargeImage(this)">
-                        <p>Dance Program</p>
-                    </td>
-                </tr>
-            </table>
-        </section>
-        <section>
-            <h2>Event Registration Form</h2>
-=======
+      </div>
+      <div class="navLinks">
+        <a href="#events">Events</a>
+        <a href="#register">Register</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#location">Nearby</a>
+        <a href="help.html" target="_blank" rel="noreferrer">Help</a>
+      </div>
+    </nav>
 
     <main class="pageShell">
-        <section id="featured" class="heroCard">
+      <section class="heroPanel">
+        <div class="heroCopyBlock">
+          <p class="eyebrow">Local Community Event Portal</p>
+          <h1>Make community events feel modern, welcoming, and easy to join.</h1>
+          <p class="heroText">
+            Explore featured events, register in seconds, collect feedback, and find what is happening near you.
+            This layout keeps the portal useful while giving it a cleaner, premium feel.
+          </p>
+
+          <div class="heroActions">
+            <a class="primaryLink" href="#register">Register now</a>
+            <a class="secondaryLink" href="#events">View gallery</a>
+          </div>
+
+          <div class="heroStats" aria-label="Portal highlights">
+            <article>
+              <strong>6</strong>
+              <span>Featured memories</span>
+            </article>
+            <article>
+              <strong>3</strong>
+              <span>Interactive forms</span>
+            </article>
+            <article>
+              <strong>1</strong>
+              <span>Unified experience</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="heroAside">
+          <div id="welcomeBanner" class="bannerCard">
+            <p class="bannerKicker">Welcome back, <span>John</span></p>
+            <h2>Special Offer</h2>
+            <p class="bannerOffer">Free entry this weekend for selected community sessions.</p>
+          </div>
+
+          <div class="miniCard">
+            <p class="eyebrow">Today’s focus</p>
+            <p>
+              Browse the gallery, complete the registration form, and leave feedback without the page feeling busy.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="events" class="sectionCard">
+        <div class="sectionHeading">
+          <div>
+            <p class="eyebrow">Community Event Gallery</p>
+            <h2>Photos from past community events</h2>
+          </div>
+          <p class="sectionNote">
+            Double-click any image to enlarge it. The gallery uses a responsive grid instead of a rigid table, so it feels lighter and more modern.
+          </p>
+        </div>
+
+        <div class="galleryGrid">
+          <figure class="galleryCard">
+            <img src="https://picsum.photos/seed/community-food/900/700" class="gallery" alt="Annual Food Festival 2023" title="Annual Food Festival" ondblclick="toggleEnlarge(this)" />
+            <figcaption>Annual Food Festival 2023</figcaption>
+          </figure>
+          <figure class="galleryCard">
+            <img src="https://picsum.photos/seed/community-run/900/700" class="gallery" alt="City Marathon 2023" title="City Marathon" ondblclick="toggleEnlarge(this)" />
+            <figcaption>City Marathon 2023</figcaption>
+          </figure>
+          <figure class="galleryCard">
+            <img src="https://picsum.photos/seed/community-tech/900/700" class="gallery" alt="Tech Workshop April" title="Tech Workshop" ondblclick="toggleEnlarge(this)" />
+            <figcaption>Tech Workshop April</figcaption>
+          </figure>
+          <figure class="galleryCard">
+            <img src="https://picsum.photos/seed/community-sports/900/700" class="gallery" alt="Youth Sports Day 2023" title="Youth Sports Day" ondblclick="toggleEnlarge(this)" />
+            <figcaption>Youth Sports Day 2023</figcaption>
+          </figure>
+          <figure class="galleryCard">
+            <img src="https://picsum.photos/seed/community-dance/900/700" class="gallery" alt="Cultural Dance Evening" title="Cultural Dance Evening" ondblclick="toggleEnlarge(this)" />
+            <figcaption>Cultural Dance Evening</figcaption>
+          </figure>
+          <figure class="galleryCard">
+            <img src="https://picsum.photos/seed/community-cleanup/900/700" class="gallery" alt="Community Clean Up Drive" title="Clean Up Drive" ondblclick="toggleEnlarge(this)" />
+            <figcaption>Community Clean Up Drive</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="register" class="sectionGrid">
+        <section class="sectionCard formCard">
+          <div class="sectionHeading compact">
             <div>
-                <p class="eyebrow">Welcome Resident</p>
-                <h2>Featured community spotlight</h2>
-                <p id="featuredEvent" class="highlightText"></p>
+              <p class="eyebrow">Event Registration</p>
+              <h2>Join an upcoming event</h2>
             </div>
-            <div class="calloutPanel">
-                <p>Upcoming events only appear here when they still have seats available.</p>
-                <p id="statusMessage" aria-live="polite"></p>
-            </div>
+            <p class="sectionNote">A cleaner form layout makes the page feel less crowded while keeping the same validation behavior.</p>
+          </div>
+
+          <form id="registrationForm" onsubmit="registerCheck(event)">
+            <label for="Name">Name</label>
+            <input type="text" id="Name" placeholder="Enter your name" autofocus required oninput="contentAvailable()" />
+
+            <label for="Email">Email</label>
+            <input type="email" id="Email" placeholder="Enter your email" required oninput="contentAvailable()" />
+
+            <label for="date">Date</label>
+            <input type="date" id="date" required oninput="contentAvailable()" />
+
+            <label for="event-type">Event Type</label>
+            <select id="event-type" onchange="storePreference()" required oninput="contentAvailable()">
+              <option value="">Select an option</option>
+              <option value="conference">Conference</option>
+              <option value="workshop">Workshop</option>
+              <option value="seminar">Seminar</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter your message" required oninput="contentAvailable()"></textarea>
+
+            <button type="submit" class="solidButton" onclick="console.log('Submit button clicked')">Submit</button>
+            <output id="regOutput" for="Name Email date event-type message"></output>
+          </form>
         </section>
 
-        <section id="events" class="contentSection">
-            <div class="sectionHeader">
-                <div>
-                    <p class="eyebrow">Browse Events</p>
-                    <h2>Upcoming community events</h2>
-                </div>
-                <div class="controlRow">
-                    <label class="visuallyHidden" for="searchInput">Search events</label>
-                    <input id="searchInput" type="search" placeholder="Quick search by name" autocomplete="off">
-                    <label class="visuallyHidden" for="categoryFilter">Category filter</label>
-                    <select id="categoryFilter" onchange="void 0">
-                        <option value="all">All categories</option>
-                    </select>
-                    <label class="visuallyHidden" for="locationFilter">Location filter</label>
-                    <select id="locationFilter" onchange="void 0">
-                        <option value="all">All locations</option>
-                    </select>
-                    <button type="button" id="clearFiltersBtn">Reset</button>
-                </div>
-            </div>
-
-            <div id="loadingSpinner" class="loadingSpinner" hidden>Loading events...</div>
-            <div id="remoteStatus" class="subtleNote"></div>
-            <div id="eventList" class="eventGrid" aria-live="polite"></div>
-        </section>
-
-        <section id="register" class="contentSection formGrid">
+        <section class="sectionCard formCard" id="feedback">
+          <div class="sectionHeading compact">
             <div>
-                <p class="eyebrow">Registration Form</p>
-                <h2>Register for an event</h2>
-                <p class="subtleNote">The form reads values through <strong>form.elements</strong>, validates inline, and posts the payload to a mock API.</p>
+              <p class="eyebrow">Event Feedback</p>
+              <h2>Leave a quick response</h2>
             </div>
->>>>>>> 271b8b0 (Build community event portal)
+            <p class="sectionNote">A second card keeps the feedback workflow distinct and easier to scan on larger screens.</p>
+          </div>
 
-            <form id="registrationForm" class="portalForm" novalidate>
-                <div>
-                    <label for="fullName">Name</label>
-                    <input id="fullName" name="fullName" type="text" placeholder="Enter your name" required>
-                    <span class="errorText" id="fullNameError"></span>
-                </div>
+          <form id="feedbackForm">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your 10-digit phone number" onblur="validatePhone(this)" oninput="contentAvailable()" required />
 
-                <div>
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Enter your email" required>
-                    <span class="errorText" id="emailError"></span>
-                </div>
+            <label for="event-type1">Event Type</label>
+            <select id="event-type1" onchange="showFee(this)" oninput="contentAvailable()" required>
+              <option value="">Select an option</option>
+              <option value="conference">Conference</option>
+              <option value="workshop">Workshop</option>
+              <option value="seminar">Seminar</option>
+            </select>
 
-                <div>
-                    <label for="eventSelect">Selected event</label>
-                    <select id="eventSelect" name="eventSelect" required></select>
-                    <span class="errorText" id="eventSelectError"></span>
-                </div>
+            <p id="fee" class="fieldHint"></p>
 
-                <div class="buttonCluster">
-                    <button type="submit" id="registerBtn">Register</button>
-                    <button type="button" id="simulateCancelBtn">Cancel registration</button>
-                </div>
+            <label for="feedbackText">Feedback</label>
+            <textarea id="feedbackText" placeholder="Write your feedback..." onkeydown="countCharacters()" onkeyup="countCharacters()" oninput="contentAvailable()"></textarea>
 
-                <p id="formMessage" class="subtleNote" aria-live="polite"></p>
-            </form>
+            <p id="charCount" class="fieldHint">Characters: 0</p>
+            <button type="button" class="solidButton secondaryTint" onclick="confirmFeedback()">Submit Feedback</button>
+            <h3 id="feedbackReply"></h3>
+          </form>
         </section>
-<<<<<<< HEAD
-        <section>
-            <h2>Community News</h2>
-=======
+      </section>
 
-        <section id="tools" class="contentSection toolGrid">
-            <div class="toolCard">
-                <p class="eyebrow">Async JS</p>
-                <h2>Fetch mock event data</h2>
-                <p>One button uses <strong>.then()</strong> and <strong>.catch()</strong>; the other repeats the same flow with <strong>async/await</strong>.</p>
-                <div class="buttonCluster">
-                    <button type="button" id="loadMockBtn">Load mock events</button>
-                    <button type="button" id="loadAsyncBtn">Load with async/await</button>
-                </div>
+      <section class="sectionGrid">
+        <section class="sectionCard mediaCard">
+          <div class="sectionHeading compact">
+            <div>
+              <p class="eyebrow">Event Promo Video</p>
+              <h2>Watch the highlight reel</h2>
             </div>
->>>>>>> 271b8b0 (Build community event portal)
+            <p class="sectionNote">A framed media block makes the page feel more editorial and less like a raw form demo.</p>
+          </div>
 
-            <div class="toolCard">
-                <p class="eyebrow">jQuery</p>
-                <h2>Legacy DOM helper demo</h2>
-                <p id="jqueryNote">When jQuery is available, the register button click also fades event cards in and out. Moving this portal to React or Vue would make state updates and reusable UI sections easier to manage as the app grows.</p>
-            </div>
-
-            <div class="toolCard">
-                <p class="eyebrow">Portal Status</p>
-                <h2>Debugging signals</h2>
-                <p>Open DevTools to inspect console logs, network calls, and registration payloads when testing the portal.</p>
-            </div>
-        </section>
-<<<<<<< HEAD
-        <section>
-            <h2>Event Promo Video</h2>
-
-            <video width="400"
-                   controls
-                   oncanplay="videoReady()">
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4"
-                        type="video/mp4">
-            </video>
-
-            <p id="videoMessage"></p>
-        </section>
-        <section>
-            <h2>Find Nearby Events</h2>
-
-            <button onclick="findLocation()">
-                Find Nearby Events
-            </button>
-
-            <p id="location"></p>
+          <video oncanplay="videoReady()" controls width="400" class="promoVideo">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p id="videoStatus" class="fieldHint"></p>
         </section>
 
-    </main>
-    <footer id="contact">
-        <h3>Contact Us</h3>
-        <p>Email: community@portal.com</p>
-    </footer>
-    <script src="script.js"></script>
-=======
+        <section class="sectionCard locationCard" id="location">
+          <div class="sectionHeading compact">
+            <div>
+              <p class="eyebrow">Find Nearby Events</p>
+              <h2>Locate events around you</h2>
+            </div>
+            <p class="sectionNote">The location block is deliberately simple so the page feels calm and focused.</p>
+          </div>
+
+          <button onclick="findLocation()" class="outlineButton">Find Nearby Events</button>
+          <p id="locationOutput" class="locationOutput"></p>
+        </section>
+      </section>
+
+      <section class="sectionCard actionsBar">
+        <button onclick="clearPreferences()" class="ghostButton">Clear Preferences</button>
+      </section>
+
+      <section id="contacts" class="sectionCard contactCard">
+        <div>
+          <p class="eyebrow">Contact Us</p>
+          <h2>Keep the conversation going</h2>
+        </div>
+        <div class="contactGrid">
+          <p>Email: citycouncil@community.gov</p>
+          <p>Phone: 044-1234-5678</p>
+        </div>
+      </section>
     </main>
 
-    <footer id="contact" class="footerShell">
-        <h3>Contact Us</h3>
-        <p>Email: community@portal.com</p>
+    <footer class="siteFooter">
+      <p>&copy; 2025 Local Community Event Portal. All rights reserved.</p>
     </footer>
 
-    <script src="main.js"></script>
->>>>>>> 271b8b0 (Build community event portal)
-</body>
+    <script>
+      function registerCheck(event) {
+        event.preventDefault();
+        console.log("Registration submitted");
+        console.log("Name:", document.getElementById("Name").value);
+        console.log("Email:", document.getElementById("Email").value);
+
+        const out = document.getElementById("regOutput");
+        out.innerText = "Registration successful! We'll see you at the event.";
+        out.className = "successOutput";
+      }
+
+      function validatePhone(input) {
+        const pattern = /^[0-9]{10}$/;
+        console.log("Phone blur - value entered:", input.value);
+
+        if (!pattern.test(input.value)) {
+          alert("Please enter a valid 10-digit phone number.");
+          input.value = "";
+        }
+      }
+
+      function showFee(select) {
+        const feeEl = document.getElementById("fee");
+        console.log("Event type selected:", select.value);
+
+        const fees = {
+          conference: "Fees: ₹500",
+          workshop: "Fees: ₹300",
+          seminar: "Fees: ₹200"
+        };
+
+        feeEl.innerText = fees[select.value] || "Please select an event type";
+      }
+
+      function countCharacters() {
+        const feedback = document.getElementById("feedbackText").value;
+        document.getElementById("charCount").innerText = "Characters: " + feedback.length;
+      }
+
+      function confirmFeedback() {
+        console.log("Feedback submitted");
+        const reply = document.getElementById("feedbackReply");
+        reply.innerText = "Feedback submitted successfully! Thank you.";
+        reply.className = "successReply";
+      }
+
+      function toggleEnlarge(img) {
+        img.classList.toggle("enlarged");
+        console.log("Image double-clicked, enlarged:", img.classList.contains("enlarged"));
+      }
+
+      function videoReady() {
+        console.log("Video canplay event fired");
+        document.getElementById("videoStatus").innerText = "Video ready to play";
+      }
+
+      let contentFilled = false;
+      function contentAvailable() {
+        contentFilled = true;
+      }
+
+      window.onbeforeunload = function () {
+        if (contentFilled) {
+          return "You have unsaved changes. Are you sure you want to leave?";
+        }
+      };
+
+      function storePreferences() {
+        const eventType = document.getElementById("event-type").value;
+        localStorage.setItem("preferredEvent", eventType);
+        sessionStorage.setItem("preferredEvent", eventType);
+        console.log("Preference stored:", eventType);
+      }
+
+      function storePreference() {
+        storePreferences();
+      }
+
+      function loadPreferences() {
+        const saved = localStorage.getItem("preferredEvent");
+
+        if (saved) {
+          document.getElementById("event-type").value = saved;
+          console.log("Preference loaded from localStorage:", saved);
+        }
+      }
+
+      function clearPreferences() {
+        localStorage.clear();
+        sessionStorage.clear();
+        document.getElementById("event-type").value = "";
+        document.getElementById("event-type1").value = "";
+        document.getElementById("fee").innerText = "";
+        alert("Preferences cleared.");
+        console.log("Preferences cleared");
+      }
+
+      function findLocation() {
+        const output = document.getElementById("locationOutput");
+        output.innerText = "Locating...";
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              const lat = position.coords.latitude;
+              const lon = position.coords.longitude;
+              console.log("Location found:", lat, lon);
+              output.innerText = "Your coordinates: " + lat.toFixed(4) + ", " + lon.toFixed(4);
+            },
+            function (error) {
+              console.error("Geolocation error:", error.message);
+              switch (error.code) {
+                case error.PERMISSION_DENIED:
+                  output.innerText = "Error: Location permission denied.";
+                  break;
+                case error.POSITION_UNAVAILABLE:
+                  output.innerText = "Error: Location information unavailable.";
+                  break;
+                case error.TIMEOUT:
+                  output.innerText = "Error: Location request timed out.";
+                  break;
+                default:
+                  output.innerText = "Error: " + error.message;
+              }
+            },
+            {
+              enableHighAccuracy: true,
+              timeout: 5000,
+              maximumAge: 0
+            }
+          );
+        } else {
+          output.innerText = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      window.onload = loadPreferences;
+      console.log("Community Event Portal Loaded");
+    </script>
+  </body>
 </html>
